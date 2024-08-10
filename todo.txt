@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(243, 221, 189);
+        }
+        #on{
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 2px;
+            font-size: 70px;
+        }
+        input{
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 4px;
+            height: 25px;
+        }
+        .container{
+            margin-left: 550px;
+            margin-top: 50px;
+        
+        }
+        button{
+            color: cornflowerblue;
+            background-color: black;
+            border-radius: 2px;
+        }
+        button:hover{
+            color: black;
+            background-color: white;
+            
+        }
+        #to{
+            margin-left: 100px;
+            margin-top: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 1px;
+            font-size: 25px;
+            margin-bottom: 20px;
+            width: max-content;
+            
+        }
+        .in{
+            margin-top: 30px;
+            margin-left: 500px;
+            width: 600px;
+            height: 500px;    
+                  
+        }
+       
+    </style>
+</head>
+<body>
+    <h1 id="on">TODO LIST</h1>
+    <div class="container">
+    <input id="in" placeholder="Enter the task" type="text">
+    <button onclick="add()">ADD</button>
+</div>
+<div class="in">
+<ol id="to">
+    
+</ol>
+</div>
+<script>
+    var inp=document.getElementById("in");
+    function add()
+    {
+        if(inp.value=="")
+    {
+        alert("enter the task");
+        return;
+    }
+        var h=document.createElement("li");
+        h.textContent=inp.value;
+        to.append(h);
+        var rm=document.createElement("button");
+        rm.style.marginLeft="10px";
+        rm.textContent="remove";
+        rm.onclick=function(){
+            to.removeChild(h);
+        }
+        h.append(rm);
+        
+        
+    
+    }
+  
+</script>
+    
+</body>
+</html>
+ 
